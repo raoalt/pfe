@@ -1,0 +1,4 @@
+# Don't track the content of the folders below 
+bert_data/
+models/
+logs/
