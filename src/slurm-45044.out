@@ -1,0 +1,67 @@
+Fri Dec 20 00:28:56 2019       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla K80           On   | 00000000:05:00.0 Off |                    0 |
+| N/A   33C    P8    26W / 149W |      0MiB / 11441MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla K80           On   | 00000000:06:00.0 Off |                    0 |
+| N/A   28C    P8    30W / 149W |      0MiB / 11441MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla K80           On   | 00000000:84:00.0 Off |                    0 |
+| N/A   43C    P8    28W / 149W |      0MiB / 11441MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla K80           On   | 00000000:85:00.0 Off |                    0 |
+| N/A   59C    P0   133W / 149W |   3025MiB / 11441MiB |     99%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
++-----------------------------------------------------------------------------+
+[2019-12-20 00:29:01,143 INFO] Loading checkpoint from ../models/ext_cnndm_sbert/model_step_44000.pt
+[2019-12-20 00:29:01,774 INFO] Load pretrained SentenceTransformer: bert-base-nli-stsb-mean-tokens
+[2019-12-20 00:29:01,774 INFO] Did not find a / or \ in the name. Assume to download model from server
+[2019-12-20 00:29:01,777 INFO] Load SentenceTransformer from folder: /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip
+[2019-12-20 00:29:01,811 INFO] loading configuration file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/config.json
+[2019-12-20 00:29:01,813 INFO] Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 30522
+}
+
+[2019-12-20 00:29:01,815 INFO] loading weights file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/pytorch_model.bin
+[2019-12-20 00:29:04,100 INFO] Model name '/mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased). Assuming '/mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT' is a path or url to a directory containing tokenizer files.
+[2019-12-20 00:29:04,102 INFO] Didn't find file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/tokenizer_config.json. We won't load it.
+[2019-12-20 00:29:04,103 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/vocab.txt
+[2019-12-20 00:29:04,104 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/added_tokens.json
+[2019-12-20 00:29:04,104 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/special_tokens_map.json
+[2019-12-20 00:29:04,105 INFO] loading file None
+[2019-12-20 00:29:04,216 INFO] Use pytorch device: cpu
+[2019-12-20 00:29:04,760 INFO] Loading test dataset from ../bert_data/cnndm.test.0.bert.pt, number of examples: 2001
+[2019-12-20 00:29:04,766 INFO] * number of parameters: 120512513
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 45044.0 ON n2 CANCELLED AT 2019-12-20T00:30:25 ***
+slurmstepd: error: *** JOB 45044 ON n2 CANCELLED AT 2019-12-20T00:30:25 ***

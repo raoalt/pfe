@@ -1,0 +1,93 @@
+Thu Dec 19 18:44:59 2019       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla K80           On   | 00000000:05:00.0 Off |                    0 |
+| N/A   68C    P0   140W / 149W |   1098MiB / 11441MiB |     78%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla K80           On   | 00000000:06:00.0 Off |                    0 |
+| N/A   51C    P0   142W / 149W |   1087MiB / 11441MiB |     84%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla K80           On   | 00000000:84:00.0 Off |                    0 |
+| N/A   71C    P0   147W / 149W |   1100MiB / 11441MiB |     84%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla K80           On   | 00000000:85:00.0 Off |                    0 |
+| N/A   52C    P0   132W / 149W |   2467MiB / 11441MiB |    100%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|    0     12185      C   ...egfs/home/aliouat/miniconda3/bin/python  1087MiB |
+|    1     12186      C   ...egfs/home/aliouat/miniconda3/bin/python  1076MiB |
+|    2     12187      C   ...egfs/home/aliouat/miniconda3/bin/python  1089MiB |
++-----------------------------------------------------------------------------+
+[2019-12-19 18:45:04,527 INFO] Loading checkpoint from ../models/ext_cnndm_sbert/model_step_44000.pt
+[2019-12-19 18:45:05,146 INFO] Load pretrained SentenceTransformer: bert-base-nli-stsb-mean-tokens
+[2019-12-19 18:45:05,148 INFO] Did not find a / or \ in the name. Assume to download model from server
+[2019-12-19 18:45:05,151 INFO] Load SentenceTransformer from folder: /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip
+[2019-12-19 18:45:05,190 INFO] loading configuration file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/config.json
+[2019-12-19 18:45:05,193 INFO] Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 30522
+}
+
+[2019-12-19 18:45:05,195 INFO] loading weights file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/pytorch_model.bin
+[2019-12-19 18:45:07,429 INFO] Model name '/mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased). Assuming '/mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT' is a path or url to a directory containing tokenizer files.
+[2019-12-19 18:45:07,432 INFO] Didn't find file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/tokenizer_config.json. We won't load it.
+[2019-12-19 18:45:07,433 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/vocab.txt
+[2019-12-19 18:45:07,434 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/added_tokens.json
+[2019-12-19 18:45:07,436 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/special_tokens_map.json
+[2019-12-19 18:45:07,437 INFO] loading file None
+[2019-12-19 18:45:07,537 INFO] Use pytorch device: cpu
+[2019-12-19 18:45:08,105 INFO] Loading test dataset from ../bert_data/cnndm.test.0.bert.pt, number of examples: 2001
+[2019-12-19 18:45:08,113 INFO] * number of parameters: 120512513
+[2019-12-19 19:14:03,778 INFO] Loading test dataset from ../bert_data/cnndm.test.1.bert.pt, number of examples: 2001
+[2019-12-19 19:43:39,011 INFO] Loading test dataset from ../bert_data/cnndm.test.2.bert.pt, number of examples: 2001
+[2019-12-19 20:11:24,658 INFO] Loading test dataset from ../bert_data/cnndm.test.3.bert.pt, number of examples: 2001
+[2019-12-19 20:40:26,815 INFO] Loading test dataset from ../bert_data/cnndm.test.4.bert.pt, number of examples: 2000
+[2019-12-19 21:07:45,527 INFO] Loading test dataset from ../bert_data/cnndm.test.5.bert.pt, number of examples: 1485
+Namespace(accum_count=2, alpha=0.6, batch_size=3000, beam_size=5, bert_data_path='../bert_data/cnndm', beta1=0.9, beta2=0.999, block_trigram=True, dec_dropout=0.2, dec_ff_size=2048, dec_heads=8, dec_hidden_size=768, dec_layers=6, enc_dropout=0.2, enc_ff_size=512, enc_hidden_size=512, enc_layers=6, encoder='bert', ext_dropout=0.1, ext_ff_size=2048, ext_heads=8, ext_hidden_size=768, ext_layers=2, finetune_bert=True, generator_shard_size=32, gpu_ranks=[0], label_smoothing=0.1, large=False, load_from_extractive='', log_file='../logs/test_ext_cnndm_sbert', lr=0.002, lr_bert=0.002, lr_dec=0.002, max_grad_norm=0, max_length=150, max_pos=512, max_tgt_len=140, min_length=15, mode='test', model_path='../models/ext_cnndm_sbert', optim='adam', param_init=0, param_init_glorot=True, recall_eval=False, report_every=50, report_rouge=True, result_path='../results/cnndm', save_checkpoint_steps=1000, seed=666, sep_optim=False, share_emb=False, task='ext', temp_dir='../temp_ext_cnndm', test_all=False, test_batch_size=200, test_from='../models/ext_cnndm_sbert/model_step_44000.pt', test_start_from=-1, train_from='', train_steps=50000, use_bert_emb=False, use_interval=True, visible_gpus='-1', warmup_steps=10000, warmup_steps_bert=8000, warmup_steps_dec=8000, world_size=1)
+DEVICE : cpu
+gpu_rank 0
+11489
+11489
+Traceback (most recent call last):
+  File "train.py", line 155, in <module>
+    test_ext(args, device_id, cp, step)
+  File "/mnt/beegfs/projects/dsupte/pfe/src/train_extractive.py", line 197, in test_ext
+    trainer.test(test_iter, step)
+  File "/mnt/beegfs/projects/dsupte/pfe/src/models/trainer_ext.py", line 294, in test
+    rouges = test_rouge(self.args.temp_dir, can_path, gold_path)
+  File "/mnt/beegfs/projects/dsupte/pfe/src/others/utils.py", line 79, in test_rouge
+    r = pyrouge.Rouge155(temp_dir=temp_dir)
+  File "/mnt/beegfs/projects/dsupte/pfe/src/others/pyrouge.py", line 123, in __init__
+    self.__set_rouge_dir(rouge_dir)
+  File "/mnt/beegfs/projects/dsupte/pfe/src/others/pyrouge.py", line 439, in __set_rouge_dir
+    self._home_dir = self.__get_rouge_home_dir_from_settings()
+  File "/mnt/beegfs/projects/dsupte/pfe/src/others/pyrouge.py", line 453, in __get_rouge_home_dir_from_settings
+    with open(self._settings_file) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/beegfs/home/aliouat/.pyrouge/settings.ini'

@@ -138,10 +138,11 @@ class SBert(nn.Module):
     """Some Information about SBert"""
     def __init__(self, device):
         super(SBert, self).__init__()
-        self.model = SentenceTransformer('bert-base-nli-mean-tokens')
+        model1 = SentenceTransformer('bert-base-nli-stsb-mean-tokens')
+        self.model = nn.DataParallel(model1, device_ids=[0,1,2], dim=1)
         self.device = device
-#        self.to(device)
-
+        self.to(device)
+        #self.model = nn.DataParallel(model)
     def _pad(self, data, pad_id, width=-1):
         if (width == -1):
             width = max(len(d) for d in data)
@@ -211,7 +212,7 @@ class SBert(nn.Module):
 
         #print("padded_txt :", padded_txt)
         for article in x:
-            pre_res.append(self.model.encode(article))
+            pre_res.append(self.model.module.encode(article, show_progress_bar=False))
   
         #print("dim de res avant padding", len(pre_res))
         # res, mask, labels_new= self._pad(pre_res, 0)[0], self._pad(pre_res,0)[1], self._pad(pre_res, 0)[1]
@@ -240,10 +241,12 @@ class ExtSummarizer(nn.Module):
     def __init__(self, args, device, checkpoint):
         super(ExtSummarizer, self).__init__()
         self.args = args
+        print("DEVICE :", device)
         self.device = device
-        self.bert = Bert(args.large, args.temp_dir, args.finetune_bert)
+        #self.bert = Bert(args.large, args.temp_dir, args.finetune_bert)
         self.SBert = SBert(device)
-        self.ext_layer = ExtTransformerEncoder(self.bert.model.config.hidden_size, args.ext_ff_size, args.ext_heads,
+        self.SBert.to(device)
+        self.ext_layer = ExtTransformerEncoder(768, args.ext_ff_size, args.ext_heads,
                                                args.ext_dropout, args.ext_layers)
         if (args.encoder == 'baseline'):
             bert_config = BertConfig(self.bert.model.config.vocab_size, hidden_size=args.ext_hidden_size,
@@ -282,7 +285,7 @@ class ExtSummarizer(nn.Module):
       #  print("src_txt :", src_txt)
        # print("mask_cls", mask_cls)
         top_vec = self.SBert(src_txt)
-        #top_vec.to(self.device)
+        top_vec = top_vec.to(self.device)
         sents_vec = top_vec[torch.arange(top_vec.size(0)).unsqueeze(1), clss]
         sents_vec = sents_vec * mask_cls[:, :, None].float()
         sent_scores = self.ext_layer(sents_vec, mask_cls).squeeze(-1)
@@ -321,8 +324,8 @@ class AbsSummarizer(nn.Module):
         super(AbsSummarizer, self).__init__()
         self.args = args
         self.device = device
-        self.bert = Bert(args.large, args.temp_dir, args.finetune_bert)
-        self.SBert = SentenceTransformer('bert-base-nli-mean-tokens')
+       # self.bert = Bert(args.large, args.temp_dir, args.finetune_bert)
+        self.SBert = SBert(device)
 
         if bert_from_extractive is not None:
             self.bert.model.load_state_dict(
@@ -380,7 +383,21 @@ class AbsSummarizer(nn.Module):
         self.to(device)
 
     def forward(self, src, tgt, segs, clss, mask_src, mask_tgt, mask_cls):
-        top_vec = self.bert(src, segs, mask_src)
+        #top_vec = self.bert(src, segs, mask_src)
         dec_state = self.decoder.init_decoder_state(src, top_vec)
         decoder_outputs, state = self.decoder(tgt[:, :-1], top_vec, dec_state)
         return decoder_outputs, None
+
+
+
+       # top_vec = self.SBert(src_txt)
+       # top_vec = top_vec.to(device)
+       # dev_st
+       # top_vec = self.SBert(src_txt)
+       # top_vec = top_vec.to(self.device)
+       # sents_vec = top_vec[torch.arange(top_vec.size(0)).unsqueeze(1), clss]
+       # sents_vec = sents_vec * mask_cls[:, :, None].float()
+       # sent_scores = self.ext_layer(sents_vec, mask_cls).squeeze(-1)
+       # return sent_scores, mask_cls
+
+

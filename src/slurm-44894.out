@@ -1,0 +1,504 @@
+Wed Dec 18 12:39:24 2019       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla K80           On   | 00000000:05:00.0 Off |                    0 |
+| N/A   32C    P8    26W / 149W |      0MiB / 11441MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla K80           On   | 00000000:06:00.0 Off |                    0 |
+| N/A   28C    P8    30W / 149W |      0MiB / 11441MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla K80           On   | 00000000:84:00.0 Off |                    0 |
+| N/A   31C    P8    27W / 149W |      0MiB / 11441MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla K80           On   | 00000000:85:00.0 Off |                    0 |
+| N/A   30C    P8    27W / 149W |      0MiB / 11441MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+[2019-12-18 12:39:29,640 INFO]  Starting process pid: 29893  
+[2019-12-18 12:39:29,653 INFO]  Starting process pid: 29894  
+[2019-12-18 12:39:29,664 INFO]  Starting process pid: 29895  
+[2019-12-18 12:39:34,056 INFO] Device ID 0
+[2019-12-18 12:39:34,058 INFO] Device cuda
+[2019-12-18 12:39:34,191 INFO] Load pretrained SentenceTransformer: bert-base-nli-stsb-mean-tokens
+[2019-12-18 12:39:34,192 INFO] Did not find a / or \ in the name. Assume to download model from server
+[2019-12-18 12:39:34,194 INFO] Load SentenceTransformer from folder: /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip
+[2019-12-18 12:39:34,222 INFO] loading configuration file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/config.json
+[2019-12-18 12:39:34,225 INFO] Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 30522
+}
+
+[2019-12-18 12:39:34,226 INFO] loading weights file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/pytorch_model.bin
+[2019-12-18 12:39:34,228 INFO] loading configuration file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/config.json
+[2019-12-18 12:39:34,229 INFO] loading configuration file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/config.json
+[2019-12-18 12:39:34,231 INFO] Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 30522
+}
+
+[2019-12-18 12:39:34,232 INFO] loading weights file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/pytorch_model.bin
+[2019-12-18 12:39:34,232 INFO] Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 30522
+}
+
+[2019-12-18 12:39:34,234 INFO] loading weights file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/pytorch_model.bin
+[2019-12-18 12:39:36,677 INFO] Model name '/mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased). Assuming '/mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT' is a path or url to a directory containing tokenizer files.
+[2019-12-18 12:39:36,681 INFO] Didn't find file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/tokenizer_config.json. We won't load it.
+[2019-12-18 12:39:36,682 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/vocab.txt
+[2019-12-18 12:39:36,683 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/added_tokens.json
+[2019-12-18 12:39:36,684 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/special_tokens_map.json
+[2019-12-18 12:39:36,685 INFO] loading file None
+[2019-12-18 12:39:36,778 INFO] Model name '/mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased). Assuming '/mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT' is a path or url to a directory containing tokenizer files.
+[2019-12-18 12:39:36,784 INFO] Didn't find file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/tokenizer_config.json. We won't load it.
+[2019-12-18 12:39:36,786 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/vocab.txt
+[2019-12-18 12:39:36,786 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/added_tokens.json
+[2019-12-18 12:39:36,787 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/special_tokens_map.json
+[2019-12-18 12:39:36,788 INFO] loading file None
+[2019-12-18 12:39:36,812 INFO] Model name '/mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased). Assuming '/mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT' is a path or url to a directory containing tokenizer files.
+[2019-12-18 12:39:36,821 INFO] Didn't find file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/tokenizer_config.json. We won't load it.
+[2019-12-18 12:39:36,823 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/vocab.txt
+[2019-12-18 12:39:36,824 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/added_tokens.json
+[2019-12-18 12:39:36,825 INFO] loading file /mnt/beegfs/home/aliouat/.cache/torch/sentence_transformers/public.ukp.informatik.tu-darmstadt.de_reimers_sentence-transformers_v0.2_bert-base-nli-stsb-mean-tokens.zip/0_BERT/special_tokens_map.json
+[2019-12-18 12:39:36,826 INFO] loading file None
+[2019-12-18 12:39:37,006 INFO] Use pytorch device: cuda
+[2019-12-18 12:39:39,396 INFO] ExtSummarizer(
+  (SBert): SBert(
+    (model): DataParallel(
+      (module): SentenceTransformer(
+        (0): BERT(
+          (bert): BertModel(
+            (embeddings): BertEmbeddings(
+              (word_embeddings): Embedding(30522, 768, padding_idx=0)
+              (position_embeddings): Embedding(512, 768)
+              (token_type_embeddings): Embedding(2, 768)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (encoder): BertEncoder(
+              (layer): ModuleList(
+                (0): BertLayer(
+                  (attention): BertAttention(
+                    (self): BertSelfAttention(
+                      (query): Linear(in_features=768, out_features=768, bias=True)
+                      (key): Linear(in_features=768, out_features=768, bias=True)
+                      (value): Linear(in_features=768, out_features=768, bias=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                    (output): BertSelfOutput(
+                      (dense): Linear(in_features=768, out_features=768, bias=True)
+                      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                  )
+                  (intermediate): BertIntermediate(
+                    (dense): Linear(in_features=768, out_features=3072, bias=True)
+                  )
+                  (output): BertOutput(
+                    (dense): Linear(in_features=3072, out_features=768, bias=True)
+                    (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                    (dropout): Dropout(p=0.1, inplace=False)
+                  )
+                )
+                (1): BertLayer(
+                  (attention): BertAttention(
+                    (self): BertSelfAttention(
+                      (query): Linear(in_features=768, out_features=768, bias=True)
+                      (key): Linear(in_features=768, out_features=768, bias=True)
+                      (value): Linear(in_features=768, out_features=768, bias=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                    (output): BertSelfOutput(
+                      (dense): Linear(in_features=768, out_features=768, bias=True)
+                      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                  )
+                  (intermediate): BertIntermediate(
+                    (dense): Linear(in_features=768, out_features=3072, bias=True)
+                  )
+                  (output): BertOutput(
+                    (dense): Linear(in_features=3072, out_features=768, bias=True)
+                    (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                    (dropout): Dropout(p=0.1, inplace=False)
+                  )
+                )
+                (2): BertLayer(
+                  (attention): BertAttention(
+                    (self): BertSelfAttention(
+                      (query): Linear(in_features=768, out_features=768, bias=True)
+                      (key): Linear(in_features=768, out_features=768, bias=True)
+                      (value): Linear(in_features=768, out_features=768, bias=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                    (output): BertSelfOutput(
+                      (dense): Linear(in_features=768, out_features=768, bias=True)
+                      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                  )
+                  (intermediate): BertIntermediate(
+                    (dense): Linear(in_features=768, out_features=3072, bias=True)
+                  )
+                  (output): BertOutput(
+                    (dense): Linear(in_features=3072, out_features=768, bias=True)
+                    (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                    (dropout): Dropout(p=0.1, inplace=False)
+                  )
+                )
+                (3): BertLayer(
+                  (attention): BertAttention(
+                    (self): BertSelfAttention(
+                      (query): Linear(in_features=768, out_features=768, bias=True)
+                      (key): Linear(in_features=768, out_features=768, bias=True)
+                      (value): Linear(in_features=768, out_features=768, bias=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                    (output): BertSelfOutput(
+                      (dense): Linear(in_features=768, out_features=768, bias=True)
+                      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                  )
+                  (intermediate): BertIntermediate(
+                    (dense): Linear(in_features=768, out_features=3072, bias=True)
+                  )
+                  (output): BertOutput(
+                    (dense): Linear(in_features=3072, out_features=768, bias=True)
+                    (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                    (dropout): Dropout(p=0.1, inplace=False)
+                  )
+                )
+                (4): BertLayer(
+                  (attention): BertAttention(
+                    (self): BertSelfAttention(
+                      (query): Linear(in_features=768, out_features=768, bias=True)
+                      (key): Linear(in_features=768, out_features=768, bias=True)
+                      (value): Linear(in_features=768, out_features=768, bias=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                    (output): BertSelfOutput(
+                      (dense): Linear(in_features=768, out_features=768, bias=True)
+                      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                  )
+                  (intermediate): BertIntermediate(
+                    (dense): Linear(in_features=768, out_features=3072, bias=True)
+                  )
+                  (output): BertOutput(
+                    (dense): Linear(in_features=3072, out_features=768, bias=True)
+                    (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                    (dropout): Dropout(p=0.1, inplace=False)
+                  )
+                )
+                (5): BertLayer(
+                  (attention): BertAttention(
+                    (self): BertSelfAttention(
+                      (query): Linear(in_features=768, out_features=768, bias=True)
+                      (key): Linear(in_features=768, out_features=768, bias=True)
+                      (value): Linear(in_features=768, out_features=768, bias=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                    (output): BertSelfOutput(
+                      (dense): Linear(in_features=768, out_features=768, bias=True)
+                      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                  )
+                  (intermediate): BertIntermediate(
+                    (dense): Linear(in_features=768, out_features=3072, bias=True)
+                  )
+                  (output): BertOutput(
+                    (dense): Linear(in_features=3072, out_features=768, bias=True)
+                    (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                    (dropout): Dropout(p=0.1, inplace=False)
+                  )
+                )
+                (6): BertLayer(
+                  (attention): BertAttention(
+                    (self): BertSelfAttention(
+                      (query): Linear(in_features=768, out_features=768, bias=True)
+                      (key): Linear(in_features=768, out_features=768, bias=True)
+                      (value): Linear(in_features=768, out_features=768, bias=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                    (output): BertSelfOutput(
+                      (dense): Linear(in_features=768, out_features=768, bias=True)
+                      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                  )
+                  (intermediate): BertIntermediate(
+                    (dense): Linear(in_features=768, out_features=3072, bias=True)
+                  )
+                  (output): BertOutput(
+                    (dense): Linear(in_features=3072, out_features=768, bias=True)
+                    (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                    (dropout): Dropout(p=0.1, inplace=False)
+                  )
+                )
+                (7): BertLayer(
+                  (attention): BertAttention(
+                    (self): BertSelfAttention(
+                      (query): Linear(in_features=768, out_features=768, bias=True)
+                      (key): Linear(in_features=768, out_features=768, bias=True)
+                      (value): Linear(in_features=768, out_features=768, bias=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                    (output): BertSelfOutput(
+                      (dense): Linear(in_features=768, out_features=768, bias=True)
+                      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                  )
+                  (intermediate): BertIntermediate(
+                    (dense): Linear(in_features=768, out_features=3072, bias=True)
+                  )
+                  (output): BertOutput(
+                    (dense): Linear(in_features=3072, out_features=768, bias=True)
+                    (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                    (dropout): Dropout(p=0.1, inplace=False)
+                  )
+                )
+                (8): BertLayer(
+                  (attention): BertAttention(
+                    (self): BertSelfAttention(
+                      (query): Linear(in_features=768, out_features=768, bias=True)
+                      (key): Linear(in_features=768, out_features=768, bias=True)
+                      (value): Linear(in_features=768, out_features=768, bias=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                    (output): BertSelfOutput(
+                      (dense): Linear(in_features=768, out_features=768, bias=True)
+                      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                  )
+                  (intermediate): BertIntermediate(
+                    (dense): Linear(in_features=768, out_features=3072, bias=True)
+                  )
+                  (output): BertOutput(
+                    (dense): Linear(in_features=3072, out_features=768, bias=True)
+                    (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                    (dropout): Dropout(p=0.1, inplace=False)
+                  )
+                )
+                (9): BertLayer(
+                  (attention): BertAttention(
+                    (self): BertSelfAttention(
+                      (query): Linear(in_features=768, out_features=768, bias=True)
+                      (key): Linear(in_features=768, out_features=768, bias=True)
+                      (value): Linear(in_features=768, out_features=768, bias=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                    (output): BertSelfOutput(
+                      (dense): Linear(in_features=768, out_features=768, bias=True)
+                      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                  )
+                  (intermediate): BertIntermediate(
+                    (dense): Linear(in_features=768, out_features=3072, bias=True)
+                  )
+                  (output): BertOutput(
+                    (dense): Linear(in_features=3072, out_features=768, bias=True)
+                    (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                    (dropout): Dropout(p=0.1, inplace=False)
+                  )
+                )
+                (10): BertLayer(
+                  (attention): BertAttention(
+                    (self): BertSelfAttention(
+                      (query): Linear(in_features=768, out_features=768, bias=True)
+                      (key): Linear(in_features=768, out_features=768, bias=True)
+                      (value): Linear(in_features=768, out_features=768, bias=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                    (output): BertSelfOutput(
+                      (dense): Linear(in_features=768, out_features=768, bias=True)
+                      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                  )
+                  (intermediate): BertIntermediate(
+                    (dense): Linear(in_features=768, out_features=3072, bias=True)
+                  )
+                  (output): BertOutput(
+                    (dense): Linear(in_features=3072, out_features=768, bias=True)
+                    (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                    (dropout): Dropout(p=0.1, inplace=False)
+                  )
+                )
+                (11): BertLayer(
+                  (attention): BertAttention(
+                    (self): BertSelfAttention(
+                      (query): Linear(in_features=768, out_features=768, bias=True)
+                      (key): Linear(in_features=768, out_features=768, bias=True)
+                      (value): Linear(in_features=768, out_features=768, bias=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                    (output): BertSelfOutput(
+                      (dense): Linear(in_features=768, out_features=768, bias=True)
+                      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                      (dropout): Dropout(p=0.1, inplace=False)
+                    )
+                  )
+                  (intermediate): BertIntermediate(
+                    (dense): Linear(in_features=768, out_features=3072, bias=True)
+                  )
+                  (output): BertOutput(
+                    (dense): Linear(in_features=3072, out_features=768, bias=True)
+                    (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                    (dropout): Dropout(p=0.1, inplace=False)
+                  )
+                )
+              )
+            )
+            (pooler): BertPooler(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (activation): Tanh()
+            )
+          )
+        )
+        (1): Pooling()
+      )
+    )
+  )
+  (ext_layer): ExtTransformerEncoder(
+    (pos_emb): PositionalEncoding(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (transformer_inter): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=768, out_features=768, bias=True)
+          (linear_values): Linear(in_features=768, out_features=768, bias=True)
+          (linear_query): Linear(in_features=768, out_features=768, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=768, out_features=768, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=768, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=768, bias=True)
+          (layer_norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (1): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=768, out_features=768, bias=True)
+          (linear_values): Linear(in_features=768, out_features=768, bias=True)
+          (linear_query): Linear(in_features=768, out_features=768, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=768, out_features=768, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=768, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=768, bias=True)
+          (layer_norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (layer_norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+    (wo): Linear(in_features=768, out_features=1, bias=True)
+    (sigmoid): Sigmoid()
+  )
+)
+[2019-12-18 12:39:39,405 INFO] * number of parameters: 120512513
+[2019-12-18 12:39:39,406 INFO] Start training...
+[2019-12-18 12:39:39,544 INFO] Loading train dataset from ../bert_data/xsum.train.88.bert.pt, number of examples: 1988
+[2019-12-18 12:41:42,280 INFO] Loading train dataset from ../bert_data/xsum.train.99.bert.pt, number of examples: 1991
+[0, 1, 2]
+gpu_rank 1
+DEVICE : cuda
+gpu_rank 1
+[2019-12-18 12:41:49,002 INFO] Step 50/50000; xent: 3.45; lr: 0.0000001;  97 docs/s;    129 sec
+[0, 1, 2]
+gpu_rank 0
+DEVICE : cuda
+gpu_rank 0
+[0, 1, 2]
+gpu_rank 2
+DEVICE : cuda
+gpu_rank 2
+[2019-12-18 12:43:36,993 INFO] Loading train dataset from ../bert_data/xsum.train.53.bert.pt, number of examples: 1990
+[2019-12-18 12:43:52,705 INFO] Step 100/50000; xent: 2.65; lr: 0.0000002; 108 docs/s;    253 sec
+slurmstepd: error: *** JOB 44894 ON n2 CANCELLED AT 2019-12-18T12:44:47 ***

@@ -88,8 +88,8 @@ class ExtTransformerEncoder(nn.Module):
     def forward(self, top_vecs, mask):
         """ See :obj:`EncoderBase.forward()`"""
 
-        print("mask : ", mask)
-        print("size mask", mask.size())
+#        print("mask : ", mask)
+#        print("size mask", mask.size())
         batch_size, n_sents = top_vecs.size(0), top_vecs.size(1)
         pos_emb = self.pos_emb.pe[:, :n_sents]
         x = top_vecs * mask[:, :, None].float()

@@ -33,7 +33,7 @@ class Batch(object):
             tgt = torch.tensor(self._pad(pre_tgt, 0))
 
             segs = torch.tensor(self._pad(pre_segs, 0))
-            print("longueur du batch : ", self.batch_size)
+#            print("longueur du batch : ", self.batch_size)
 #            print("pre_clss ancien :", pre_clss_ancien)
  #           print("pre_clss :", pre_clss)
             mask_src = ~(src == 0)
